@@ -1,0 +1,30 @@
+.spacing {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.87);}
+.top {
+    display: flex;
+    padding: 20px;
+    background: red;  
+    justify-content: center;
+    align-items: center;}
+
+.container-itens {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;  
+    align-items: center;}
+
+.container-itens h1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 35px;
+        
+    }
+.icon {
+    padding-left: 15px;
+    color: white;
+    font-size: 20px;
+    }

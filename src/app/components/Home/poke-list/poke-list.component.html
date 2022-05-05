@@ -1,0 +1,55 @@
+<main class="content">
+    <div class="home">
+        <div class="search-container">
+            <form>
+                <input type="text" placeholder="Pesquisar por nome ou número..." (input)="search($event)">
+                <fa-icon class="search-icon" [icon]="faSearch"></fa-icon>
+            </form>
+            <div class="select-filter">
+                <div class="text-order">Ordenar por:</div>
+                    <div class="select-type">
+                        <select class="select" (change)="filterPokeNum($event)">
+                            <option value="Menor">Menor número</option>
+                            <option value="Maior">Maior número</option>
+                            <option value="AlfabeticaA">Alfabetica(ascendente)</option>
+                            <option value="AlfabeticaD">Alfabetica(descendente)</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <div class="content-pokemons">
+            <div class="pokelist-content">
+                <div class="pokemons-container">
+                    <div class="pokemons" *ngFor="let pokemon of Pokemons | slice:0:range ; index as i " >
+                        <div class="fav" (click)="selectfav(pokemon.name)">
+                            <img src="{{pokemon.sprites.animated}}" alt="Pokemon-Sprites">
+                         </div>
+                        <p>Nº {{pokemon.national_number}}</p>
+                        <h2>{{pokemon.name}}</h2>
+                        <div id="btn-type-poke">
+                            <button class="btn-no-display" id="{{pokemon.type.slice(0,1)}}">{{pokemon.type.slice(0,1)}}</button>
+                            <button class="btn-no-display" id="{{pokemon.type.slice(1)}}">{{pokemon.type.slice(1)}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-viewMore-container">
+                    <button class="btn-view-more" [ngStyle]="{'display': view}" (click)="viewMore()">Ver mais...</button>
+                </div>
+            </div>
+        </div>
+        <div class="filter-fav-container">
+            <div class="text-filter">
+                <p>Filtrar por tipo</p>
+            </div>
+            <div class="btn-type-container">
+                <div class="btn-type-roll" *ngFor="let type of types">
+                    <button [ngClass]="buttonType" (click)="btnFilterTypes(type)" >{{type}}</button>
+                </div>
+            </div>
+            <div class="btn-onOff-filter">
+                <p>Filtrar Favoritos</p>
+                <input type="checkbox" (click)="filterFavBtn()" id="fav-input">
+            </div>    
+        </div>
+    </div>
+</main>

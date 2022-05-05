@@ -1,1 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+*{margin: 0; box-sizing: border-box;}
+
+
+#btn-type-poke {
+    display: flex;
+    max-width: 160px;
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.btn-no-display {
+
+    margin-right: 5px;
+    padding:8px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    display: none;
+
+
+}
+
+#Fire {
+    background-color: #EE7F33;
+    display: flex;
+}
+#Normal {
+    background-color: #A9A778;
+    display: flex;
+}
+#Water {
+    background-color: #6890F0;
+    display: flex;
+}
+#Grass {
+    background-color: #78c84f ;
+    display: flex;
+}
+#Ice {
+    background-color: #98D8D7;
+    display: flex;
+}
+#Poison {
+    background-color: #A040A1;
+    display: flex;
+}
+#Ground {
+    
+    background-color: #E0C069;
+    display: flex;
+}
+#Flying {
+    background-color: #A790EF;
+    display: flex;
+}
+
+#Bug {
+    background-color: #A8B821;
+    display: flex;
+}
+
+#Rock {
+    background-color: #B6A037;
+    display: flex;
+}
+
+#Ghost {
+    background-color: #705797;
+    display: flex;
+}
+
+#Dragon {
+    background-color: #724EF9;
+    display: flex;
+}
+
+#Dark {
+    background-color: #6F5848;
+    display: flex;
+}
+
+#Steel {
+    background-color: #B8B8D0;
+    display: flex;
+}
+
+#Fairy {
+    
+    background-color: #F4C8E2;
+    display: flex;
+}
+
+#Psychic {
+    background-color: #E95587;
+    display: flex;
+}
+
+#Electric {
+    background-color: #F8CF32;
+    display: flex;
+}
+
+#Fighting {
+    background-color: #C03228;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 15px;
+
+}
+::-webkit-scrollbar-thumb {
+background-color: #E2350D;
+}
+
+.btn-viewMore-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.btn-view-more {
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:white;
+    border-radius: 10px;
+    border: 1px solid #E2350D;
+    font-family: 'Titillium Web', sans-serif;
+    color: red;
+    font-size: 15px;
+    
+}
+
+.btn-onOff-filter input[type="checkbox"] {
+    width: 50px;
+    height: 20px;
+    appearance: none;
+    background-color: #dae2df;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+
+}
+
+.btn-onOff-filter input:checked[type="checkbox"] {
+    background-color: #E2350D;
+}
+
+.btn-onOff-filter input[type="checkbox"]::before{
+    content: '';
+    width: 19px;
+    height: 19px;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 9px;
+    position: absolute;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,24);
+    transform: scale(1.1);
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+
+.btn-onOff-filter input:checked[type="checkbox"]::before {
+    left: 30px;
+}
+
+
+
