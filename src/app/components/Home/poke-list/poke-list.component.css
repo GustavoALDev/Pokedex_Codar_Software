@@ -200,3 +200,31 @@
     padding-bottom: 10px;
 }
 
+.fav {
+    position: relative;
+}
+.fav-icon {
+    display: none;
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+.fav:hover .fav-icon {
+    display: block;
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+.fav-icon-heart {
+    
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+
