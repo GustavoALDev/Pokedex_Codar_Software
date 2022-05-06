@@ -92,7 +92,6 @@
     font-family: 'Titillium Web', sans-serif;
 }
 .content-pokemons {
-   border: 1px solid red;
     order: 2;
     margin-top: 30px;
     display: flex;
@@ -153,7 +152,6 @@
     margin-right: 15px;
     padding: 5px;
     order: 1;
-    border: 1px solid black;
     display: flex;
     flex-flow: row wrap;
     margin-top: 30px;
