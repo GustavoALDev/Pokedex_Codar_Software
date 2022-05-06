@@ -52,6 +52,7 @@ btnOnOff = false
     this.getPokemons();
   }
 //Get dos pokemons
+
 getPokemons(){
   this.getPoke.getAll().subscribe((resp)=>{
     //Array de Pokemons completa(com os repetidos)
