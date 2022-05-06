@@ -132,4 +132,4 @@ filterFavBtn(){
   console.log(this.view)
 }
  
-}
+
