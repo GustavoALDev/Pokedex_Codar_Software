@@ -131,5 +131,5 @@ filterFavBtn(){
   else {this.view = 'flex'}  
   console.log(this.view)
 }
- 
 
+}
