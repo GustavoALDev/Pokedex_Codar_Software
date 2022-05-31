@@ -23,6 +23,8 @@
                     <div class="pokemons" *ngFor="let pokemon of Pokemons | slice:0:range ; index as i " >
                         <div class="fav" (click)="selectfav(pokemon.name)">
                             <img src="{{pokemon.sprites.animated}}" alt="Pokemon-Sprites">
+                            <fa-icon class="fav-icon" [icon]="heartfavr"></fa-icon>
+                            <fa-icon *ngIf="this.pokemonfav.includes(pokemon.name)" [id]="pokemon.name"  class="fav-icon-heart" [icon]="heartfavs"></fa-icon>
                          </div>
                         <p>Nº {{pokemon.national_number}}</p>
                         <h2>{{pokemon.name}}</h2>
@@ -32,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn-viewMore-container">
+                <div *ngIf="this.Pokemons.length > 10" class="btn-viewMore-container">
                     <button class="btn-view-more" [ngStyle]="{'display': view}" (click)="viewMore()">Ver mais...</button>
                 </div>
             </div>
@@ -53,3 +55,4 @@
         </div>
     </div>
 </main>
+<footer></footer>

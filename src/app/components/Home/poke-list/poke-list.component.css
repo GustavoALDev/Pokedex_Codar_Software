@@ -99,26 +99,34 @@
     flex-basis: 780px;
     margin-left: 15px;
     margin-right: 15px;
-    overflow: scroll;
+    overflow: auto;
     height: 490px;
+    
 }
 
 .pokelist-content {
+    
+   
     margin-top: 15px; 
-    display: flex;
+
     height: max-content;
     flex-flow: row wrap;
+ 
+
 
     
 }
 .pokemons-container {
+  
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+  
 
 }
 
 .pokemons {
+    
     align-items: center;
     width: 140px;
     margin-bottom: 50px;
@@ -200,3 +208,45 @@
     padding-bottom: 10px;
 }
 
+.fav {
+    position: relative;
+}
+.fav-icon {
+    display: none;
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+.fav:hover .fav-icon {
+    display: block;
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+.fav-icon-heart {
+    
+    color: red;
+    position: absolute;
+    right: 12px;
+    top: 5px
+}
+
+
+::-webkit-scrollbar  {
+    width: 5px;
+    height: 15px;
+    
+
+}
+::-webkit-scrollbar-thumb {
+    background-color: #E2350D;
+    border-radius: 15px;
+
+}
+footer {
+    padding: 50px;
+}

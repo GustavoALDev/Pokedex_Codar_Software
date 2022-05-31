@@ -105,16 +105,8 @@
     display: flex;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 15px;
 
-}
-::-webkit-scrollbar-thumb {
-background-color: #E2350D;
-}
-
-.btn-viewMore-container {
+.btn-viewMore-container  {
     display: flex;
     justify-content: center;
     width: 100%;
