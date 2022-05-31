@@ -43,8 +43,7 @@ range:number = 20;
 
 
 pokemonfav:string[] = [];
-favName:string[] = [];
-teste:any
+
 btnOnOff = false
 
 
@@ -53,9 +52,7 @@ btnOnOff = false
 
   ngOnInit(): void {
     this.getPokemons();
-    this.teste = JSON.stringify(localStorage.getItem('fav'))
-    this.favName = JSON.parse(this.teste)
-    console.log(this.teste)
+
     
   }
 
@@ -115,10 +112,9 @@ selectfav(name:string){
 
   let fav = document.getElementById(name)
   
-  if(this.pokemonfav.includes(name)){this.pokemonfav.splice(this.favName.indexOf(name),1)}
+  if(this.pokemonfav.includes(name)){this.pokemonfav.splice(this.pokemonfav.indexOf(name),1)}
   else{this.pokemonfav.push(name)} 
   
-  console.log(this.favName)
   
 }
 
