@@ -115,7 +115,7 @@ selectfav(name:string){
 
   let fav = document.getElementById(name)
   
-  if(this.pokemonfav.includes(name)){this.pokemonfav.splice(this.pokemonfav.indexOf(name),1)}
+  if(this.pokemonfav.includes(name)){this.pokemonfav.splice(this.favName.indexOf(name),1)}
   else{this.pokemonfav.push(name)} 
   
   console.log(this.favName)
