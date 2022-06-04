@@ -21,16 +21,17 @@ library.add(fas,far)
   styleUrls: ['./poke-list.component.css']
 })
 export class PokeListComponent implements OnInit {
- 
+
 allPokemons:Pokemons[] = [];
 Pokemons:Pokemons[] = [];
 
 
 buttonType: string = 'btn-type';
-types: string[] = 
+types: string[] =
 ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting', 'Fire','Flying', 'Ghost','Grass',
 'Ground', 'Ice', 'Normal', 'Poison', 'Psychic', 'Rock', 'Steel', 'Water'];
 
+type:any
 
 
 faSearch = faSearch;
@@ -53,21 +54,25 @@ btnOnOff = false
   ngOnInit(): void {
     this.getPokemons();
 
-    
+
   }
 
 getPokemons(){
   this.getPoke.getAll().subscribe((resp)=>{
     const dataAll = resp.results
-    const datafilter = new Map()     
-    
-    dataAll.forEach((pokemon)=>{if(!datafilter.has(pokemon.name))
-    {datafilter.set(pokemon.name, pokemon)}})
-    
+    const datafilter = new Map()
+
+    dataAll.forEach((pokemon)=>{
+      if(!datafilter.has(pokemon.name)){
+        datafilter.set(pokemon.name, pokemon)}})
+        console.log(datafilter);
+
+
     const data = Array.from(datafilter, ([_,value])=> value)
-    
+
     this.allPokemons = data
     this.Pokemons = data
+
     })};
 
 search(e:Event):void{
@@ -111,23 +116,23 @@ btnFilterTypes(e:string) {
 selectfav(name:string){
 
   let fav = document.getElementById(name)
-  
+
   if(this.pokemonfav.includes(name)){this.pokemonfav.splice(this.pokemonfav.indexOf(name),1)}
-  else{this.pokemonfav.push(name)} 
-  
-  
+  else{this.pokemonfav.push(name)}
+
+
 }
 
 
 
 filterFavBtn(){
-  
+
   if(this.btnOnOff == false) {this.Pokemons = this.allPokemons.filter((a)=> this.pokemonfav.includes(a.name)), this.btnOnOff = true}
   else{this.Pokemons = this.allPokemons, this.btnOnOff = false}
   //remove o botão ver mais
   if(this.view == 'flex'){this.view = 'none'}
-  else {this.view = 'flex'}  
+  else {this.view = 'flex'}
   console.log(this.view)
 }
- 
+
 }

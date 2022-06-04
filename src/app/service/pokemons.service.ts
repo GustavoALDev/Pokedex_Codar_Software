@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map} from 'rxjs';
 import { Pokemons } from '../Model/pokemons';
 import { Database } from '../Model/database';
 

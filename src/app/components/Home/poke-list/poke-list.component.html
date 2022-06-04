@@ -29,8 +29,9 @@
                         <p>Nº {{pokemon.national_number}}</p>
                         <h2>{{pokemon.name}}</h2>
                         <div id="btn-type-poke">
-                            <button class="btn-no-display" id="{{pokemon.type.slice(0,1)}}">{{pokemon.type.slice(0,1)}}</button>
-                            <button class="btn-no-display" id="{{pokemon.type.slice(1)}}">{{pokemon.type.slice(1)}}</button>
+                          <div *ngFor="let types of pokemon.type">
+                            <button class="btn-types" id="{{types}}">{{types}}</button>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -51,7 +52,7 @@
             <div class="btn-onOff-filter">
                 <p>Filtrar Favoritos</p>
                 <input type="checkbox" (click)="filterFavBtn()" id="fav-input">
-            </div>    
+            </div>
         </div>
     </div>
 </main>

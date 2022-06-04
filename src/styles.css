@@ -2,20 +2,22 @@
 
 
 #btn-type-poke {
+  
     display: flex;
     max-width: 160px;
     flex-direction: row;
     margin-left: 5px;
 }
 
-.btn-no-display {
+.btn-types {
 
-    margin-right: 5px;
+    margin-right: 10px;
     padding:8px;
     color: white;
     border: none;
     border-radius: 3px;
-    display: none;
+    display: none
+
 
 
 }
@@ -45,7 +47,7 @@
     display: flex;
 }
 #Ground {
-    
+
     background-color: #E0C069;
     display: flex;
 }
@@ -85,7 +87,7 @@
 }
 
 #Fairy {
-    
+
     background-color: #F4C8E2;
     display: flex;
 }
@@ -110,7 +112,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    
+
 }
 
 .btn-view-more {
@@ -124,7 +126,7 @@
     font-family: 'Titillium Web', sans-serif;
     color: red;
     font-size: 15px;
-    
+
 }
 
 .btn-onOff-filter input[type="checkbox"] {
